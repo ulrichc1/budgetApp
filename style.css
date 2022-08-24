@@ -1,0 +1,560 @@
+@font-face {
+    font-family: "siteFont";
+    src: url("Lato2OFL/Lato-Bold.ttf");
+    }
+
+body {
+    background-color: black;
+    color: black;
+    font-family: "siteFont";
+    font-weight:normal;
+    font-style:normal;  
+}
+
+.logo{
+    position:absolute;
+    top:17px;
+    right:600px;
+
+}
+
+.budget-section {
+    position : absolute;
+    top:100px;
+    left:17px;
+    height: 1300px;
+    width: 1316px;
+    background-color: white;
+}
+
+.budget {
+    border: none;
+    box-shadow:0  5px 7px 7px gainsboro;
+    width: 500px;
+    height: 520px;
+    position : absolute;
+    left:65px;
+    top:70px;
+
+}
+
+.expenses {
+    border: none;
+    box-shadow:0 5px 7px 7px gainsboro;
+    width: 500px;
+    height: 520px;
+    position: absolute;
+    top:72px;
+    left:745px;
+}
+
+#add-budget {
+    display: block;
+    position:absolute;
+    top:360px;
+    left:172px;
+    width: 120px;
+    height: 40px;
+    font-family: "siteFont";
+    background-color: black;
+    color: white;
+}
+
+#add-expense {
+    display: block;
+    position:absolute;
+    top:380px;
+    left:187px;
+    width: 120px;
+    height: 40px;
+    font-family: "siteFont";
+    background-color: black;
+    color: white;
+}
+
+#number {
+    position: absolute;
+    bottom:210px;
+    left:80px;
+    display: block;
+    font-size: x-large;
+    font-family: "siteFont";
+    width: 300px;
+    height: 30px;
+}
+
+#expName {
+    position: absolute;
+    top:auto;
+    bottom:230px;
+    left:90px;
+    display: block;
+    font-size: x-large;
+    font-family: "siteFont";
+    width: 300px;
+    height: 30px;
+ 
+}
+
+#expNumber {
+    position: absolute;
+    top:320px;
+    display: block;
+    font-size: x-large;
+    font-family: "siteFont";
+    width: 300px;
+    height: 30px;
+    bottom:160px;
+    left:90px;
+}
+
+.balance {
+    background-color: white;
+    position: absolute;
+    color:black;
+    border: none;
+    box-shadow:0  5px 7px 7px gainsboro;
+    width: 500px;
+    height: 450px;
+    left:400px;
+    top: 700px;
+}
+
+#budgetImg{
+    position : absolute;
+    top:55px;
+    left:75px;
+}
+
+#expenseImg {
+    position:absolute;
+    top:50px;
+    left:80px;
+}
+
+#balancelg{
+    position:absolute;
+    left:165px;
+    top:40px;
+}
+
+.amountbala{
+    width: 266px; ;
+    height: 70px; ;
+    position:absolute;
+    font-family: "siteFont";
+    font-size: xx-large;
+    top:190px;
+    right: 18px;
+}
+
+
+#bug {
+    background-color: white;
+    border:none;
+
+}
+
+#btb{
+    position:absolute;
+    top:350px;
+    left: 185px;
+    width: 135px;
+    height: 65px;
+}
+
+
+#bte{
+    position:absolute;
+    width: 15px;
+    height: 14px;
+    bottom:428px;
+    right:25px;
+}
+
+button.circle{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+button.circle:hover
+{
+    background-color: gainsboro;
+}
+
+.list-edit{
+    position:absolute;
+    right:647px;
+    bottom:30px;
+}
+
+#displayListEdit{
+border:none;
+background-color: white;
+}
+
+.displayBlock{
+    display: none;
+}
+
+.blur{
+        /* Add the blur effect */
+        filter: blur(6px);
+        -webkit-filter: blur(6px);
+       
+      }
+
+.displayed{
+    background-color: black; /* Fallback color */
+    background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
+    color: black;
+    font-weight: bold;
+    font-family: "siteFont";
+    border: 3px solid black;
+    position: absolute;
+    bottom:150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 800px;
+    height: 550px;
+    padding: 20px;
+    text-align: center;
+}
+
+.close{
+    display:none;
+    position:absolute;
+    right:638px;
+    bottom:30px;
+}
+
+button{
+    background-color: white;
+    border-color: white;
+}
+
+
+.showListButton{
+    position:absolute;
+    right:2px;
+    bottom:10px;
+}
+.hideListButton{
+    display:none;
+}
+.showCloseButton{
+    position:absolute;
+    right:630px;
+    top:80px;
+}
+.hideCloseButton{
+    display:none;
+}
+
+.budgetAmountToHide {
+    display: none;
+}
+
+.budgetAmountToShow {
+    position: absolute;
+    top:230px;
+    left:190px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowDix {
+    position: absolute;
+    top:230px;
+    left:175px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowCent {
+    position: absolute;
+    top:230px;
+    left:165px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowMil {
+    position: absolute;
+    top:230px;
+    left:150px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowDixMil {
+    position: absolute;
+    top:230px;
+    left:135px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowCentMil {
+    position: absolute;
+    top:230px;
+    left:120px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowMillion {
+    position: absolute;
+    top:230px;
+    left: 105px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowDixMillion {
+    position: absolute;
+    top:230px;
+    left: 90px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowCentMillion {
+    position: absolute;
+    top:230px;
+    left: 80px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+
+.budgetAmountToShowBillion {
+    position: absolute;
+    top:230px;
+    left: 65px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowTenBillion {
+    position: absolute;
+    top:230px;
+    left: 50px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.budgetAmountToShowCentBillion {
+    position: absolute;
+    top:230px;
+    left: 35px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.defB {
+    position: absolute;
+    top:170px;
+    left:200px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShow {
+    position: absolute;
+    top:165px;
+    left:210px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowDix {
+    position: absolute;
+    top: 165px;;
+    left:190px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowCent {
+    position: absolute;
+    top: 165px;;
+    left: 174px;;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowMil {
+    position: absolute;
+    top: 165px;;
+    left:161px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowDixMil {
+    position: absolute;
+    top: 165px;;
+    left:149px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowCentMil {
+    position: absolute;
+    top: 165px;
+    left:136px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowMillion {
+    position: absolute;
+    top: 165px;;
+    left: 123px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowDixMillion {
+    width: 400px;
+    position: absolute;
+    top:165px;
+    left: 103px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowCentMillion {
+    width: 400px;
+    position: absolute;
+    top: 165px;;
+    left: 90px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+
+.balanceAmountToShowBillion {
+    width: 400px;
+    position: absolute;
+    top: 165px;;
+    left: 77px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowTenBillion {
+    width: 400px;
+    position: absolute;
+    top:165px;
+    left: 64px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.balanceAmountToShowCentBillion {
+    width: 500px;
+    position: absolute;
+    top:165px;
+    left: 48px;
+    font-family: "siteFont";
+    font-size: 50px;
+    
+}
+
+.toHide {
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loadingPage {
+    position : absolute;
+    top:100px;
+    left:17px;
+    height: 1300px;
+    width: 1316px;
+    background-color: white;
+    
+}
+#chargement{
+    border-left: 10px solid black;
+    border-top: 10px solid whitesmoke;
+    border-bottom: 10px solid black;
+    border-right: 10px solid whitesmoke;
+    border-radius: 50%;
+    width:80px;
+    height:80px;
+    -webkit-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; right:0; bottom:0;
+}
+#editForm{
+    position:absolute;
+    left:355px;
+    top:200px;
+    font-family: "siteFont";
+    color: white;
+}
+#saveChanges{
+    position:absolute;
+    left:355px;
+    top:200px;
+    display: block;
+    width: 120px;
+    height: 40px;
+    font-family: "siteFont";
+    background-color: black;
+    color: white;
+}
+
+
+
+html,body{height:100%;}
+

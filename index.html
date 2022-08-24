@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>BUDGET APP</title>
+</head>
+<body>
+    <footer>
+    <div id="logo" class="logo">
+        <a href="#" > <img src="icon16760.png" alt="logo"> </a>
+    </div>
+    <script type="text/javascript">
+        const logo = document.getElementById("logo");
+        logo.addEventListener("click",()=> location.reload());
+    </script>
+</footer>
+    
+    <div class="budget-section">
+    <div class="toBeBlurred">
+        <div class="budget">
+          <img src="budgetCaseTitle350154.png" alt="" id="budgetImg"/>
+          <div class="budgetAmountToHide bdgt"> <p class="amount">$ <span id="budgetAmount">0</span></p></div>
+          <div class="budget-form" id="budgetform">
+            <form id="addForm">
+              <label for=""> </label> <br />
+              <input type="number" id="number"> <br />
+              <script type="text/javascript">
+                var numbScroll = document.getElementById('number');
+                number.addEventListener("click",function(){
+                    window.scrollTo({
+             top:125,
+             behavior: 'smooth'
+                });
+                })
+              </script>
+              <button type="submit" id="add-budget">Add Budget</button>
+            </form>
+          </div>
+        </div>
+        </div>
+<div class="list-edit">
+     <button id="displayListEdit">
+        <img src="list_edit.png" class="showListButton" />
+    </button>
+    <div class="displayBlock">
+    <div class="edit-form" id="editForm">
+        <form action="" id="saveEdit">
+          <div class="">
+            <label for="">Edit your expense</label> <br />
+            <input type="text" id="editExpName" />
+          </div>
+          <div class="">
+            <label for="">Edit expense amount</label> <br />
+            <input type="number" id="editExpNumber" />
+          </div>
+          <button type="submit" id="saveChanges">Save changes</button>
+        </form>
+      </div>
+      <div id="displayExpenses">
+        <div class="budget-list">
+          <div class="col">
+
+          </div>
+          <div class="col">
+        
+          </div>
+          <div class="col"></div>
+        </div>
+        <div id="expValue"></div>
+      </div>
+    </div>
+    
+
+</div>
+<div class="close"> 
+    <button id="cancel"> 
+        <img src="cancel.png" alt="close">
+    </button>
+</div>
+<div class="afterDisplay hideCloseButton"> 
+    <button id="closeButton"> 
+        <img src="cancel.png" alt="close">
+    </button>
+</div>
+<div class="toBeBlurred">
+        <div class="expenses">
+          <img src="amountCaseBudget350154.png"  alt="" id="expenseImg" />
+          <p class="exp-amount toHide">$ <span id="expensesAmount">0</span></p>
+          <div class="expense-form" id="expense-form">
+            <form action="" id="expForm">
+              <div class="">
+                <label for=""></label> <br />
+                <input type="text" id="expName" placeholder="Enter a name" />
+              </div>
+              <div class="">
+                <label for=""></label> <br />
+                <input type="number" id="expNumber" placeholder="Enter a valid amount"/>
+              </div>
+              <button type="submit" id="add-expense">Add expense</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+            var numbEScroll = document.getElementById('expNumber');
+            var nameEScroll = document.getElementById('expName');
+            numbEScroll.addEventListener("click",function(){
+                window.scrollTo({
+         top:125,
+         behavior: 'smooth'
+            });
+            })
+            nameEScroll.addEventListener("click",function(){
+                window.scrollTo({
+         top:125,
+         behavior: 'smooth'
+            });
+            
+            })
+          </script>
+        <div class="toBeBlurred">
+        <div class="balance">
+            <div id="bte">
+                <button class="circle" id="btntoExp" >
+                <img src="backtoexp.png" alt="Back to expenses" id="bteImg">
+            </button>
+            <script type="text/javascript">
+                const btntoE = document.getElementById("btntoExp");
+                btntoE.addEventListener('click',function(){
+
+                window.scrollTo({
+                    top: 120,behavior: 'smooth',})
+               
+            });
+                
+                
+            </script>
+            </div>
+          <img src="balance.png" alt="balance" id="balancelg"/>
+          <p id="balAm" class="amountbala defB"> $ <span id="balanceAmount">0</span></p>
+          <button onclick="callBudget()" id="bug">
+            <script type="text/javascript">
+                function aFocus(monChamp)
+                {
+                document.getElementById(monChamp).focus();
+                };      
+                var toPlaceHolder = document.getElementById('number');
+                var budgetShow = document.getElementsByClassName("bdgt");
+                const btn=document.getElementById('bug');
+                btn.addEventListener("click", function() { window.scrollTo({
+                    top: 0,behavior: 'smooth',});
+                }
+                );
+                btn.addEventListener("click",function(){
+                    for(i=0;i<budgetShow.length;i++){
+                    budgetShow[i].classList.add("budgetAmountToHide");
+                    };
+                toPlaceHolder.placeholder = "Enter a new amount.";
+                
+                });
+            </script>
+            <img src="btb13565.png" alt="Back to budget" id="btb">
+          </button>
+        </div>
+        </div>
+   
+        </div>
+      <script type="text/javascript" src="script.js"></script>
+      <script type="text/javascript">
+        function addClass(elt,classe){
+            for(const elts of elt){
+                elts.classList.add(classe);
+            };
+        };
+        var CloseExist = false;
+        var main = document.getElementsByClassName('toBeBlurred');
+        const dispEdit = document.getElementById('displayListEdit');
+        var dispList = document.getElementsByClassName('showListButton');
+        var dispClose = document.getElementsByClassName('close');
+        var dispBlock = document.getElementsByClassName('displayBlock');
+        var dClose = document.getElementsByClassName('afterDisplay');
+        var closeBtn = document.getElementById('closeButton');
+        dispEdit.addEventListener('click',function(){
+            for(i=0;i<dispBlock.length;i++){
+                dispBlock[i].style.display = 'block';
+            };
+            if(!(CloseExist)){
+                for(i=0;i<dClose.length;i++){
+                dClose[i].classList.remove('hideCloseButton');
+            };
+            }
+            
+            addClass(main,"blur");
+            addClass(dispBlock,"displayed");
+            addClass(dispList,"hideListButton");
+            addClass(dClose,"showCloseButton");
+            window.scrollTo({
+            top: 310,behavior: 'smooth',});
+            
+        } );
+        closeBtn.addEventListener('click',function(){
+            for(i=0;i<dispBlock.length;i++){
+                dispBlock[i].style.display = 'none';
+            };
+            for(i=0;i<main.length;i++){
+                main[i].classList.remove('blur');
+            };
+            addClass(dClose,"hideCloseButton");
+            addClass(dispList,"showListButton");
+            for(i=0;i<dispList.length;i++){
+                dispList[i].classList.remove('hideListButton');
+            };
+            window.scrollTo({
+        top: 750,behavior: 'smooth',});
+            closeExist = true;
+        });
+    </script>
+</body>
+</html>
