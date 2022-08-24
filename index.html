@@ -13,7 +13,7 @@
     <div id="logo" class="logo">
         <a href="#" > <img src="icon16760.png" alt="logo"> </a>
     </div>
-    <script type="text/javascript">
+    <script>
         const logo = document.getElementById("logo");
         logo.addEventListener("click",()=> location.reload());
     </script>
@@ -26,9 +26,9 @@
           <div class="budgetAmountToHide bdgt"> <p class="amount">$ <span id="budgetAmount">0</span></p></div>
           <div class="budget-form" id="budgetform">
             <form id="addForm">
-              <label for=""> </label> <br />
+              <label for="number"> </label> <br />
               <input type="number" id="number"> <br />
-              <script type="text/javascript">
+              <script >
                 var numbScroll = document.getElementById('number');
                 number.addEventListener("click",function(){
                     window.scrollTo({
@@ -44,17 +44,17 @@
         </div>
 <div class="list-edit">
      <button id="displayListEdit">
-        <img src="list_edit.png" class="showListButton" />
+        <img src="list_edit.png" alt="List Edit" class="showListButton" />
     </button>
     <div class="displayBlock">
     <div class="edit-form" id="editForm">
-        <form action="" id="saveEdit">
+        <form action="none" id="saveEdit">
           <div class="">
-            <label for="">Edit your expense</label> <br />
+            <label for="editExpName">Edit your expense</label> <br />
             <input type="text" id="editExpName" />
           </div>
           <div class="">
-            <label for="">Edit expense amount</label> <br />
+            <label for="editExpNumber">Edit expense amount</label> <br />
             <input type="number" id="editExpNumber" />
           </div>
           <button type="submit" id="saveChanges">Save changes</button>
@@ -91,13 +91,13 @@
           <img src="amountCaseBudget350154.png"  alt="" id="expenseImg" />
           <p class="exp-amount toHide">$ <span id="expensesAmount">0</span></p>
           <div class="expense-form" id="expense-form">
-            <form action="" id="expForm">
+            <form action="none" id="expForm">
               <div class="">
-                <label for=""></label> <br />
+                <label for="expName"></label> <br />
                 <input type="text" id="expName" placeholder="Enter a name" />
               </div>
               <div class="">
-                <label for=""></label> <br />
+                <label for="expNumber"></label> <br />
                 <input type="number" id="expNumber" placeholder="Enter a valid amount"/>
               </div>
               <button type="submit" id="add-expense">Add expense</button>
@@ -105,7 +105,7 @@
           </div>
         </div>
         </div>
-        <script type="text/javascript">
+        <script>
             var numbEScroll = document.getElementById('expNumber');
             var nameEScroll = document.getElementById('expName');
             numbEScroll.addEventListener("click",function(){
@@ -128,7 +128,7 @@
                 <button class="circle" id="btntoExp" >
                 <img src="backtoexp.png" alt="Back to expenses" id="bteImg">
             </button>
-            <script type="text/javascript">
+            <script>
                 const btntoE = document.getElementById("btntoExp");
                 btntoE.addEventListener('click',function(){
 
@@ -143,7 +143,7 @@
           <img src="balance.png" alt="balance" id="balancelg"/>
           <p id="balAm" class="amountbala defB"> $ <span id="balanceAmount">0</span></p>
           <button onclick="callBudget()" id="bug">
-            <script type="text/javascript">
+            <script>
                 function aFocus(monChamp)
                 {
                 document.getElementById(monChamp).focus();
@@ -169,8 +169,8 @@
         </div>
    
         </div>
-      <script type="text/javascript" src="script.js"></script>
-      <script type="text/javascript">
+      <script  src="script.js"></script>
+      <script>
         function addClass(elt,classe){
             for(const elts of elt){
                 elts.classList.add(classe);
