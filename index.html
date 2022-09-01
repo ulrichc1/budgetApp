@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <title>BUDGET APP</title>
 </head>
 <body>
+  
     <footer>
     <div id="logo" class="logo">
         <a href="#" > <img src="icon16760.png" alt="logo"> </a>
@@ -18,8 +22,20 @@
         logo.addEventListener("click",()=> location.reload());
     </script>
 </footer>
-    
+
     <div class="budget-section">
+         <!-- <div class="container-2">
+            <p> Success </p>
+            <p> You entered an expense !</p>
+          </div>
+          <div class="container-3">
+            <p> Success </p>
+            <p> Your changes are saved successfully. </p>
+          </div>
+          <div class="container-4">
+            <p> Success </p>
+            <p> You deleted : <span id="element-deleted">  </span> successfully. </p>  -->
+          
     <div class="toBeBlurred">
         <div class="budget">
           <img src="budgetCaseTitle350154.png" alt="" id="budgetImg"/>
@@ -42,6 +58,7 @@
           </div>
         </div>
         </div>
+    
 <div class="list-edit">
      <button id="displayListEdit">
         <img src="list_edit.png" alt="List Edit" class="showListButton" />
@@ -74,7 +91,7 @@
       </div>
     </div>
     
-
+  
 </div>
 <div class="close"> 
     <button id="cancel"> 
@@ -87,6 +104,7 @@
     </button>
 </div>
 <div class="toBeBlurred">
+  
         <div class="expenses">
           <img src="amountCaseBudget350154.png"  alt="" id="expenseImg" />
           <p class="exp-amount toHide">$ <span id="expensesAmount">0</span></p>
@@ -123,6 +141,87 @@
             })
           </script>
         <div class="toBeBlurred">
+          <div class="wrapper hidden">
+            <div class="toast success">
+              <div class="container-1">
+                <img src="circle-check-solid35.png" alt="Check Logo"/>
+              </div>
+              <div class="container-2 hidden1">
+                <p> Success </p>
+                <p> You entered a bugdet.</p>
+                </div>
+              <div class="container-3 hidden2">
+                  <p> Success </p>
+                  <p> You entered a new expense.</p>
+                  </div>
+              <div class="container-4 hidden3">
+                  <p> Success </p>
+                  <p> Your changes are successfully saved.</p>
+              </div>
+              <button id="close-toast"> &times; </button>
+              <!--- <div class="progress"> </div> -->
+            </div>
+              </div>
+              <script>
+                const clickNoti = document.getElementById("add-budget");
+                const clickNoti2 = document.getElementById("add-expense");
+                const toast = document.querySelector(".wrapper");
+                const closeToast = document.getElementById("close-toast");
+                /* const progressToast = document.querySelector(".progress"); */
+                const toastCase = document.querySelector(".toast");
+                const contain2 = document.querySelector(".container-2");
+                const contain3 = document.querySelector(".container-3");
+                const contain4 = document.querySelector(".container-4");
+
+                function hideAll(){
+                  contain2.classList.add('hidden1');
+                  contain3.classList.add('hidden2');
+                  contain4.classList.add('hidden3');
+                }
+                var clicked = false;
+
+                clickNoti.addEventListener("click", ()=>{
+                  if(clicked){
+                    hideAll();
+                  };
+                  toastCase.style.top = '540px';
+                  toast.classList.add("active");
+                  toast.classList.remove("hidden");
+                  /* progressToast.classList.add("active"); */
+                  contain2.classList.remove("hidden1");
+                  clicked = true;
+                  setTimeout(()=> {
+                    toast.classList.remove("active");
+                  },3000);
+                  setTimeout(()=> {
+                    toast.classList.add("hidden");
+                  },3650);
+                })
+                
+
+                clickNoti2.addEventListener("click", ()=>{
+                  if(clicked){
+                    hideAll();
+                  };
+                  toast.classList.add("active");
+                  toast.classList.remove("hidden");
+                  /* progressToast.classList.add("active"); */
+                  toastCase.style.top = '1175px';
+                  contain3.classList.remove('hidden2');
+                  clicked= true;
+                  setTimeout(()=> {
+                    toast.classList.remove("active");
+                  },3000);
+                  setTimeout(()=> {
+                    toast.classList.add("hidden");
+                  },3650);
+
+                })
+        
+                closeToast.addEventListener("click", ()=>{
+                  toast.classList.remove("active");
+                })
+              </script>
         <div class="balance">
             <div id="bte">
                 <button class="circle" id="btntoExp" >
