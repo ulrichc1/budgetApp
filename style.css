@@ -11,6 +11,8 @@ body {
     font-style:normal;  
 }
 
+
+
 .logo{
     position:absolute;
     top:17px;
@@ -554,7 +556,140 @@ button{
     color: white;
 }
 
+.wrapper{
+    width: 380px;
+    position :absolute;
+    top:0px;
+    right:0px;
+    transform:translateX(calc(100% + (-180px)));
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.wrapper.hidden{
+    width: 380px;
+    position :absolute;
+    top:0px;
+    right:0px;
+    transform:translateX(calc(100% + (-180px)));
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    overflow: hidden;
+}
+
+.toast {
+    position:absolute;
+    width: 300px;
+    top: 540px;
+    right:-180px;
+    height: 70px;
+    padding:5px 35px 20px 25px;
+    background-color: white;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1.3fr 6fr 0.5fr;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.1);
+    
+}
+
+.wrapper.active {
+    transform: translate(-50%,-50%);
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    overflow: visible;
+}
+/*
+.toast .progress{
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
 
 
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    height: 100%;
+    width: 100%;
+}
+*/
+
+.success {
+    border-left: 7px solid black ;
+}
+.sucess i{
+    color: black;
+}
+.container-1 img{
+   font-size:35px;
+   position: absolute;
+   top:30px;
+   left:20px;
+} 
+.container-1,.container-2,.container-3{
+    align-self: center;
+    font-family: "Poppins";
+}
+
+.container-2 p:first-child{
+    font-size:16px;
+    color:#101020;
+    font-weight: 600;
+}
+
+.container-2 p:last-child{
+    font-size: 12px;
+    color:#1f1f1f;
+    font-weight: 400;
+}
+
+.container-3 p:first-child{
+    font-size:16px;
+    color:#101020;
+    font-weight: 600;
+}
+
+.container-3 p:last-child{
+    font-size: 12px;
+    color:#1f1f1f;
+    font-weight: 400;
+}
+
+.container-4 p:first-child{
+    font-size:16px;
+    color:#101020;
+    font-weight: 600;
+}
+
+.container-4 p:last-child{
+    font-size: 12px;
+    color:#1f1f1f;
+    font-weight: 400;
+}
+
+.container-2.hidden1 {
+    display: none;
+}
+
+.container-3.hidden2 {
+    display: none;
+}
+
+.container-4.hidden3 {
+    display: none;
+}
+
+
+#close-toast {
+    position:absolute;
+    right:9px;
+    top:7px;
+    background-color: black;
+    border-radius: 10px;
+    height:20px;
+    width:20px;
+}
 html,body{height:100%;}
 
